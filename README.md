@@ -1,9 +1,8 @@
 
 
----
-
-# **🤖 AI-Powered Data Cleaner & Optimizer**  
-**Automatically clean, optimize, and train ML models on your dataset using LLMs and Reinforcement Learning!**  
+```markdown
+# **🤖 AI-Powered Data Cleaner & Validator**  
+**Automatically clean, validate, and assess dataset quality using LLMs and XGBoost!**  
 
 ![Demo](https://img.shields.io/badge/Demo-Streamlit-FF4B4B?logo=streamlit)  
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)  
@@ -12,21 +11,23 @@
 ---
 
 ## **📌 Overview**  
-This project automates **data cleaning, optimization, and machine learning model training** using:  
-- **LLMs (Ollama/DeepSeek)** → Analyze & clean messy data  
-- **Reinforcement Learning (Stable-Baselines3)** → Optimize dataset structure  
-- **XGBoost** → Train high-performance models  
+This professional data validation tool provides:  
+- **LLM-Powered Analysis** (Ollama/DeepSeek) → Examines data quality and suggests improvements  
+- **Automatic Cleaning** → Handles missing values, type conversions, and standardization  
+- **Model-Based Validation** → Uses XGBoost to validate dataset quality through predictive performance  
+- **Comprehensive Reporting** → Detailed cleaning logs and validation metrics  
 
-Just upload a CSV, and the AI handles everything!  
+Just upload your dataset and get a full quality assessment!  
 
 ---
 
-## **🚀 Features**  
-✅ **Automatic Data Analysis** – LLM identifies missing values, inconsistencies, and suggests fixes  
-✅ **Smart Data Cleaning** – AI fills missing values and standardizes formats  
-✅ **RL-Based Optimization** – Uses DQN to improve dataset quality  
-✅ **AutoML Training** – XGBoost model trained on optimized data  
-✅ **Streamlit UI** – User-friendly interface with real-time progress  
+## **🚀 Key Features**  
+✅ **Smart Data Analysis** – LLM examines dataset structure and suggests fixes  
+✅ **Auto-Cleaning Pipeline** – Handles missing values, type conversions, and standardization  
+✅ **Model Validation** – XGBoost model tests data quality through predictive performance  
+✅ **Professional Reporting** – Detailed cleaning logs and validation metrics  
+✅ **History Tracking** – Saves model validation results for comparison  
+✅ **Streamlit UI** – Clean, professional interface with real-time progress  
 
 ---
 
@@ -34,15 +35,14 @@ Just upload a CSV, and the AI handles everything!
 
 ### **1. Clone the Repository**  
 ```bash
-git clone https://github.com/your-username/data-cleaner-optimizer.git
-cd data-cleaner-optimizer
+git clone https://github.com/your-username/data-cleaner-validator.git
+cd data-cleaner-validator
 ```
 
 ### **2. Install Dependencies**  
 ```bash
 pip install -r requirements.txt
 ```
-*(See [requirements.txt](#requirements) below)*  
 
 ### **3. Set Up Ollama (LLM Backend)**  
 Install [Ollama](https://ollama.ai/) and pull the DeepSeek model:  
@@ -58,8 +58,6 @@ streamlit==1.32.0
 pandas==2.1.0
 numpy==1.24.0
 ollama==0.1.0
-gym==0.26.0
-stable-baselines3==2.0.0
 xgboost==2.0.0
 scikit-learn==1.3.0
 ```
@@ -70,60 +68,69 @@ scikit-learn==1.3.0
 
 ### **Run the App**  
 ```bash
-streamlit run main.py
+streamlit run app.py
 ```
-1. **Upload a CSV file**  
-2. Watch the AI **analyze, clean, optimize, and train** automatically!  
-3. **Download** cleaned data & model  
+
+**Workflow:**  
+1. **Upload** your dataset (CSV, Excel, JSON, or Parquet)  
+2. View **LLM analysis** of data quality issues  
+3. Automatic **cleaning operations** are performed  
+4. **Validation model** trains to assess data quality  
+5. **Download** cleaned data and validation report  
 
 ---
 
 ## **🧠 Code Structure**  
 
-### **1. `main.py` (Core Pipeline)**  
+### **Core Components in `app.py`**  
 ```python
-def analyze_with_llm(df):           # LLM analyzes dataset & suggests fixes
-def auto_clean_data(df):            # Auto-fills missing values & standardizes data
-def optimize_with_rl(df):           # Uses RL to optimize dataset structure
-def train_model(df):                # Trains XGBoost on optimized data
-def run_streamlit_app():            # Streamlit UI & automation flow
+class DataCleanerApp:
+    # Main application class handling the full workflow
+    
+    def _load_data()          # Robust data loading with validation
+    def analyze_with_llm()    # Get LLM analysis of dataset quality
+    def auto_clean_data()     # Perform automatic data cleaning
+    def validate_with_model() # Train XGBoost to validate data quality
+    def run_streamlit_app()   # Streamlit UI implementation
 ```
 
-### **2. Key Workflow**  
-1. **Upload CSV** → `pd.read_csv()`  
-2. **LLM Analysis** → `ollama.chat()`  
-3. **Auto-Cleaning** → Fill NA, normalize strings  
-4. **RL Optimization** → `DQN("MlpPolicy", env)`  
-5. **Model Training** → `XGBClassifier().fit()`  
+### **Key Workflow**  
+1. **File Upload & Validation** → Checks size/type and loads data  
+2. **LLM Analysis** → Examines data structure and suggests fixes  
+3. **Auto-Cleaning** → Handles missing values, type conversions  
+4. **Model Validation** → XGBoost tests data quality  
+5. **Reporting** → Generates comprehensive quality report  
 
 ---
 
 ## **📊 Example Outputs**  
+
 | Stage | Output |
 |--------|--------|
-| **LLM Analysis** | "Found 12% missing values in 'Price'. Recommend median imputation." |  
-| **Cleaned Data** | Missing values filled, outliers removed |  
-| **RL Optimization** | 15% fewer rows, improved feature distribution |  
-| **Model Accuracy** | **92.3%** (XGBoost) |  
+| **LLM Analysis** | "Found 15% missing values in 'price'. Recommend median imputation." |  
+| **Data Cleaning** | "Filled missing values, converted 2 columns to numeric" |  
+| **Validation** | "Classification accuracy: 92.3% with 'status' as target" |  
+| **Feature Importance** | Top predictive features ranked by importance |  
 
 ---
 
 ## **📜 License**  
-MIT License - Free for personal/commercial use.  
+MIT License - Free for personal and commercial use.  
 
 ---
 
 ## **🔗 Links**  
-- **[Report Issues](https://github.com/your-username/data-cleaner-optimizer/issues)**  
-- **[Contribute](https://github.com/your-username/data-cleaner-optimizer/pulls)**  
+- **[Report Issues](https://github.com/your-username/data-cleaner-validator/issues)**  
+- **[Contribute](https://github.com/your-username/data-cleaner-validator/pulls)**  
 
 ---
 
 ### **🎯 Why This Project?**  
-✔ **Saves 80% time** on data cleaning  
-✔ **No manual coding** – AI handles everything  
-✔ **End-to-end** from raw data to trained model  
+✔ **Professional-grade** data validation  
+✔ **LLM-guided** cleaning recommendations  
+✔ **Model-based** quality assessment  
+✔ **Full audit trail** of all transformations  
 
 **⭐ Star this repo if you find it useful!**  
+```
 
----
