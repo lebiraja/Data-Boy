@@ -1,59 +1,52 @@
-
-
-```markdown
-# **🤖 AI-Powered Data Cleaner & Validator**  
-**Automatically clean, validate, and assess dataset quality using LLMs and XGBoost!**  
-
-![Demo](https://img.shields.io/badge/Demo-Streamlit-FF4B4B?logo=streamlit)  
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)  
-![License](https://img.shields.io/badge/License-MIT-green)  
+**AI-Powered Data Cleaner & Validator**  
+Automatically clean, validate, and assess dataset quality using LLMs and XGBoost!  
 
 ---
 
-## **📌 Overview**  
+**Overview**  
 This professional data validation tool provides:  
-- **LLM-Powered Analysis** (Ollama/DeepSeek) → Examines data quality and suggests improvements  
-- **Automatic Cleaning** → Handles missing values, type conversions, and standardization  
-- **Model-Based Validation** → Uses XGBoost to validate dataset quality through predictive performance  
-- **Comprehensive Reporting** → Detailed cleaning logs and validation metrics  
+- LLM-Powered Analysis (Ollama/DeepSeek) → Examines data quality and suggests improvements  
+- Automatic Cleaning → Handles missing values, type conversions, and standardization  
+- Model-Based Validation → Uses XGBoost to validate dataset quality through predictive performance  
+- Comprehensive Reporting → Detailed cleaning logs and validation metrics  
 
 Just upload your dataset and get a full quality assessment!  
 
 ---
 
-## **🚀 Key Features**  
-✅ **Smart Data Analysis** – LLM examines dataset structure and suggests fixes  
-✅ **Auto-Cleaning Pipeline** – Handles missing values, type conversions, and standardization  
-✅ **Model Validation** – XGBoost model tests data quality through predictive performance  
-✅ **Professional Reporting** – Detailed cleaning logs and validation metrics  
-✅ **History Tracking** – Saves model validation results for comparison  
-✅ **Streamlit UI** – Clean, professional interface with real-time progress  
+**Key Features**  
+- Smart Data Analysis – LLM examines dataset structure and suggests fixes  
+- Auto-Cleaning Pipeline – Handles missing values, type conversions, and standardization  
+- Model Validation – XGBoost model tests data quality through predictive performance  
+- Professional Reporting – Detailed cleaning logs and validation metrics  
+- History Tracking – Saves model validation results for comparison  
+- Streamlit UI – Clean, professional interface with real-time progress  
 
 ---
 
-## **⚙️ Installation**  
+**Installation**  
 
-### **1. Clone the Repository**  
-```bash
+1. Clone the Repository  
+```
 git clone https://github.com/your-username/data-cleaner-validator.git
 cd data-cleaner-validator
 ```
 
-### **2. Install Dependencies**  
-```bash
+2. Install Dependencies  
+```
 pip install -r requirements.txt
 ```
 
-### **3. Set Up Ollama (LLM Backend)**  
-Install [Ollama](https://ollama.ai/) and pull the DeepSeek model:  
-```bash
+3. Set Up Ollama (LLM Backend)  
+Install Ollama and pull the DeepSeek model:  
+```
 ollama pull deepseek-r1:1.5b
 ```
 
 ---
 
-## **📂 Requirements**  
-```plaintext
+**Requirements**  
+```
 streamlit==1.32.0
 pandas==2.1.0
 numpy==1.24.0
@@ -64,29 +57,27 @@ scikit-learn==1.3.0
 
 ---
 
-## **💻 Usage**  
+**Usage**  
 
-### **Run the App**  
-```bash
+Run the App  
+```
 streamlit run app.py
 ```
 
 **Workflow:**  
-1. **Upload** your dataset (CSV, Excel, JSON, or Parquet)  
-2. View **LLM analysis** of data quality issues  
-3. Automatic **cleaning operations** are performed  
-4. **Validation model** trains to assess data quality  
-5. **Download** cleaned data and validation report  
+1. Upload your dataset (CSV, Excel, JSON, or Parquet)  
+2. View LLM analysis of data quality issues  
+3. Automatic cleaning operations are performed  
+4. Validation model trains to assess data quality  
+5. Download cleaned data and validation report  
 
 ---
 
-## **🧠 Code Structure**  
+**Code Structure**  
 
-### **Core Components in `app.py`**  
-```python
+Core Components in `app.py`:  
+```
 class DataCleanerApp:
-    # Main application class handling the full workflow
-    
     def _load_data()          # Robust data loading with validation
     def analyze_with_llm()    # Get LLM analysis of dataset quality
     def auto_clean_data()     # Perform automatic data cleaning
@@ -94,43 +85,42 @@ class DataCleanerApp:
     def run_streamlit_app()   # Streamlit UI implementation
 ```
 
-### **Key Workflow**  
-1. **File Upload & Validation** → Checks size/type and loads data  
-2. **LLM Analysis** → Examines data structure and suggests fixes  
-3. **Auto-Cleaning** → Handles missing values, type conversions  
-4. **Model Validation** → XGBoost tests data quality  
-5. **Reporting** → Generates comprehensive quality report  
+Key Workflow  
+- File Upload & Validation → Checks size/type and loads data  
+- LLM Analysis → Examines data structure and suggests fixes  
+- Auto-Cleaning → Handles missing values, type conversions  
+- Model Validation → XGBoost tests data quality  
+- Reporting → Generates comprehensive quality report  
 
 ---
 
-## **📊 Example Outputs**  
+**Example Outputs**  
 
-| Stage | Output |
-|--------|--------|
-| **LLM Analysis** | "Found 15% missing values in 'price'. Recommend median imputation." |  
-| **Data Cleaning** | "Filled missing values, converted 2 columns to numeric" |  
-| **Validation** | "Classification accuracy: 92.3% with 'status' as target" |  
-| **Feature Importance** | Top predictive features ranked by importance |  
-
----
-
-## **📜 License**  
-MIT License - Free for personal and commercial use.  
+| Stage            | Output |
+|-----------------|-----------------------------------------------|
+| LLM Analysis    | "Found 15% missing values in 'price'. Recommend median imputation." |  
+| Data Cleaning   | "Filled missing values, converted 2 columns to numeric" |  
+| Validation      | "Classification accuracy: 92.3% with 'status' as target" |  
+| Feature Importance | Top predictive features ranked by importance |  
 
 ---
 
-## **🔗 Links**  
-- **[Report Issues](https://github.com/your-username/data-cleaner-validator/issues)**  
-- **[Contribute](https://github.com/your-username/data-cleaner-validator/pulls)**  
+**License**  
+This project is licensed under the MIT License – Free for personal and commercial use.  
 
 ---
 
-### **🎯 Why This Project?**  
-✔ **Professional-grade** data validation  
-✔ **LLM-guided** cleaning recommendations  
-✔ **Model-based** quality assessment  
-✔ **Full audit trail** of all transformations  
+**Links**  
+- Report Issues: https://github.com/your-username/data-cleaner-validator/issues  
+- Contribute: https://github.com/your-username/data-cleaner-validator/pulls  
 
-**⭐ Star this repo if you find it useful!**  
-```
+---
+
+**Why This Project?**  
+- Professional-grade data validation  
+- LLM-guided cleaning recommendations  
+- Model-based quality assessment  
+- Full audit trail of all transformations  
+
+Star this repo if you find it useful!  
 
